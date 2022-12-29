@@ -1,0 +1,12 @@
+*
+!*/
+!nvim/**
+!polybar/**
+!i3/**
+!ranger/**
+!rofi/**
+!.gitignore
+!.zshrc
+!alacritty/**
+!neofetch/**
+
