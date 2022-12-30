@@ -1,5 +1,5 @@
 #!/bin/sh
-TMPBG=~/Pictures/wallpaper3.jpg
+TMPBG=~/Pictures/lockscreen.jpg
 dbus-send --print-reply --dest=com.github.chjj.compton.${DISPLAY/:/_} / \
     com.github.chjj.compton.opts_set string:no_fading_openclose boolean:false
 

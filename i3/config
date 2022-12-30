@@ -209,7 +209,7 @@ exec ~/.config/polybar/launch.sh
 # exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 0x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP-1-0 --off
 
 
-exec_always feh --bg-scale --no-startup-id ~/Pictures/wallpaper3.jpg
+exec_always feh --bg-scale --no-startup-id ~/Pictures/wallpaper5.jpg
 
 exec_always --no-startup-id picom
 bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) '~/Pictures/wallpaper3.jpg' '~/Pictures/lockscreen.jpg'"
