@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 eval $(starship init zsh)
 alias ls="exa -la"
 alias cmatrix="unimatrix -n -s 96 -l 'o'"
+bindkey -s '^G' 'cat ~/git_token^M'
