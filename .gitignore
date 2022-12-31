@@ -10,3 +10,5 @@
 !alacritty/**
 !neofetch/**
 !picom.conf
+!.xinitrc
+!.Xmodmap

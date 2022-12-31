@@ -250,3 +250,4 @@ exec_always wal -R
 # ];
 
 exec_always --no-startup-id flashfocus
+exec_always source ~/.xinitrc
