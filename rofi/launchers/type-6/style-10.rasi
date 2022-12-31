@@ -1,3 +1,4 @@
+@import "~/.cache/wal/colors-rofi-dark"
 * {
   font:   "JetBrains Mono Nerd Font Bold 11";
 

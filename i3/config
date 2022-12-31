@@ -195,6 +195,7 @@ bindsym Shift+Print exec "flameshot gui"
 
 bindsym $mod+p exec ~/.config/polybar/launch.sh 
 bindsym $mod+Shift+p exec "pkill polybar"
+bindsym $mod+n exec --no-startup-id flash_window
 
 assign [class="Discord"] 3
 
@@ -219,11 +220,18 @@ bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d
 # bar {
 #         status_command i3status
 # }
-default_border pixel 2
-client.focused          #81a1c1 #81a1c1 #e5e9f0 #81a1c1 #81a1c1
-client.focused_inactive #4c566a #4c566a #e5e9f0 #4c566a #4c566a
-client.unfocused        #4c566a #4c566a #e5e9f0 #4c566a #4c566a
-client.urgent           #bf616a #bf616a #e5e9f0 #bf616a #bf616a
+default_border pixel 0
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 ##### i3-gaps ##############
 # for_window [class=".*"] border pixel 2 #*
@@ -236,3 +244,9 @@ gaps outer 10
 
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock2.sh' &
 exec_always wal -R
+
+# opacity-rule = [
+#   "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+# ];
+
+exec_always --no-startup-id flashfocus
