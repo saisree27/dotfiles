@@ -1,5 +1,5 @@
 # dotfiles
-Config I use to setup and customize i3 with Arch Linux. 
+Config I use to setup and customize i3-gaps with Arch Linux. 
 ## dependencies
 * xmodmap, xorg-xrdb
 * pywal
