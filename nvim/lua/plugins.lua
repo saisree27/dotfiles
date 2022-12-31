@@ -116,4 +116,5 @@ return require('packer').startup(function()
     use 'vimwiki/vimwiki'
     use 'jacoborus/tender.vim'
     use 'wuelnerdotexe/vim-astro'
+    use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
 end)

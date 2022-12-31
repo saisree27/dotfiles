@@ -10,8 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-hide_edge_borders smart
-for_window [class="^.*"] border pixel 1 
+# hide_edge_borders smart
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -209,7 +208,7 @@ exec ~/.config/polybar/launch.sh
 # exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 0x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP-1-0 --off
 
 
-exec_always feh --bg-scale --no-startup-id ~/Pictures/wallpaper5.jpg
+exec_always feh --bg-scale --no-startup-id ~/Pictures/wallpaper6.jpg
 
 exec_always --no-startup-id picom
 bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) '~/Pictures/wallpaper3.jpg' '~/Pictures/lockscreen.jpg'"
@@ -220,19 +219,20 @@ bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d
 # bar {
 #         status_command i3status
 # }
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #ffffff
-client.focused_inactive #333333 #222222 #888888 #292d2e   #222222
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+default_border pixel 2
+client.focused          #81a1c1 #81a1c1 #e5e9f0 #81a1c1 #81a1c1
+client.focused_inactive #4c566a #4c566a #e5e9f0 #4c566a #4c566a
+client.unfocused        #4c566a #4c566a #e5e9f0 #4c566a #4c566a
+client.urgent           #bf616a #bf616a #e5e9f0 #bf616a #bf616a
 
-client.background       #ffffff
 ##### i3-gaps ##############
 # for_window [class=".*"] border pixel 2 #*
 # gaps inner 10
 # gaps outer 2
 #gaps horizontal 2
-
+gaps inner 10
+gaps outer 10
 # for_window [class="^.*"] border pixel 0
 
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock2.sh' &
+exec_always wal -R

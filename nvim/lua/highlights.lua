@@ -1,7 +1,7 @@
 local cmd = vim.cmd -- execute Vim commands
 -- cmd("let ayucolor=\"dark\"")
 cmd("set termguicolors")
-cmd('colorscheme tender')
+cmd('colorscheme pywal')
 cmd("highlight Directory gui=bold guifg=#677FA3")
 cmd("highlight NvimTreeOpenedFolderName gui=bold")
 cmd("highlight Normal guibg=#0f0f0f")
