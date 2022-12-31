@@ -11,6 +11,7 @@
 !neofetch/**
 !wal/**
 !dunst/**
+!flashfocus/**
 !picom.conf
 !.xinitrc
 !.Xmodmap
