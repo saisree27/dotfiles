@@ -51,7 +51,7 @@ bindsym $mod+Ctrl+q exec ~/.config/i3/lock2.sh
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launch.sh
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 
 # A more modern dmenu replacement is rofi:
