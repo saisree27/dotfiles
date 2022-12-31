@@ -9,6 +9,8 @@
 !.zshrc
 !alacritty/**
 !neofetch/**
+!wal/**
+!dunst/**
 !picom.conf
 !.xinitrc
 !.Xmodmap
