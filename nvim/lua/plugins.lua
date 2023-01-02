@@ -1,7 +1,8 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
-    use 'wbthomason/packer.nvim' use {
+return require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
+    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = [[require('configs.lualine')]]
@@ -109,12 +110,15 @@ return require('packer').startup(function()
     })
     use 'svermeulen/vim-yoink'
     use 'kyazdani42/nvim-web-devicons'
-    use {
-        "ray-x/lsp_signature.nvim",
-    }
-    use 'aktersnurra/no-clown-fiesta.nvim'
+    use { "ray-x/lsp_signature.nvim"}
     use 'vimwiki/vimwiki'
     use 'jacoborus/tender.vim'
+    use 'sainnhe/sonokai'
     use 'wuelnerdotexe/vim-astro'
-    use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
+    use { -- Additional text objects via treesitter
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        after = 'nvim-treesitter',
+    }
+    use "EdenEast/nightfox.nvim" 
+    use 'folke/tokyonight.nvim'
 end)
