@@ -12,6 +12,7 @@
 !wal/**
 !dunst/**
 !flashfocus/**
+!firefox/**
 !picom.conf
 !.xinitrc
 !.Xmodmap
