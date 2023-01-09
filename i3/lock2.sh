@@ -1,5 +1,5 @@
 #!/bin/sh
-TMPBG=~/Pictures/lockscreen.jpg
+TMPBG=~/Pictures/wallpaper2a.jpg
 dbus-send --print-reply --dest=com.github.chjj.compton.${DISPLAY/:/_} / \
     com.github.chjj.compton.opts_set string:no_fading_openclose boolean:false
 
@@ -8,7 +8,7 @@ dbus-send --print-reply --dest=com.github.chjj.compton.${DISPLAY/:/_} / \
 
 i3lock \
   -i $TMPBG \
-  --time-pos="x+90:y+1320" \
+  --time-pos="x+90:h-120" \
   --date-pos="tx+24:ty+25" \
   --clock --date-str "Type password to unlock..." \
   --inside-color=00000000 --ring-color=ffffffff --line-uses-inside \
