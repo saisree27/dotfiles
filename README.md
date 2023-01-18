@@ -1,7 +1,10 @@
 # dotfiles
 Config I use to setup and customize i3-gaps with Arch Linux. 
-## dependencies
-* xmodmap, xorg-xrdb
+## external dependencies
+* xorg-xrdb
 * pywal
 
-I use the command `wal -i /path/to/image` to automatically set colorschemes for zsh, alacritty, neovim, and polybar. Additionally, I disable Alt-R as an i3 mod key so it can be used for firefox navigation. For this to work correctly, the above packages need to be installed.
+I use the command `wal -i /path/to/image` to automatically set colorschemes for zsh, polybar, and firefox (using the Pywalfox extension). Here's a screenshot of my current setup:
+
+<img src="config_screenshot.png"></img>
+
