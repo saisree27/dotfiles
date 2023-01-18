@@ -2,7 +2,7 @@ local cmd = vim.cmd -- execute Vim commands
 cmd("set termguicolors")
 -- cmd('colorscheme sonokai')
 -- cmd("colorscheme nordfox")
-cmd("colorscheme tokyonight-storm")
+cmd("colorscheme spaceduck")
 cmd("highlight Directory gui=bold guifg=#677FA3")
 -- cmd("highlight Normal guibg=#0f0f0f")
 cmd('highlight clear SignColumn')

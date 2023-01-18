@@ -121,4 +121,5 @@ return require('packer').startup(function(use)
     }
     use "EdenEast/nightfox.nvim" 
     use 'folke/tokyonight.nvim'
+    use 'pineapplegiant/spaceduck'
 end)
