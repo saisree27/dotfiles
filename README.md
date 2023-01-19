@@ -1,6 +1,12 @@
 # dotfiles
 Config I use to setup and customize i3-gaps with Arch Linux. 
 ## external dependencies
+* i3-gaps (i3-wm)
+* alacritty
+* dunst
+* neovim
+* polybar
+* flashfocus
 * xorg-xrdb
 * pywal
 
