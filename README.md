@@ -6,6 +6,7 @@ Config I use to setup and customize i3-gaps with Arch Linux.
 * dunst
 * neovim
 * polybar
+* rofi
 * flashfocus
 * xorg-xrdb
 * pywal
