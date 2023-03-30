@@ -2,6 +2,7 @@
 Config I use to setup and customize i3-gaps with Arch Linux. 
 ## external dependencies
 * bspwm
+* sxhkd
 * alacritty
 * tmux
 * dunst
