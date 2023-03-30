@@ -42,7 +42,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec tabbed alacritty --embed 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -209,10 +209,12 @@ exec ~/.config/polybar/launch.sh
 # exec --no-startup-id xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 0x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP-1-0 --off
 
 
-exec_always feh --bg-scale --no-startup-id ~/Pictures/wallpaper6.jpg
+exec_always feh --bg-scale --no-startup-id ~/Pictures/w4.jpg
 
 exec_always --no-startup-id picom
 bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) '~/Pictures/wallpaper3.jpg' '~/Pictures/lockscreen.jpg'"
+bindsym $mod+Shift+u exec "xrandr --output HDMI-0 --mode 2560x1440 --rate 144"
+bindsym $mod+u exec "xrandr --output DP-2 --mode 1920x1080 --rate 144"
 # exec_always --no-startup-id ~/xborder/xborders 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -221,29 +223,29 @@ bindsym $mod+Shift+w exec "convert -resize $(xdpyinfo | grep dimensions | cut -d
 #         status_command i3status
 # }
 default_border pixel 0
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
+# set_from_resource $fg i3wm.color7 #f0f0f0
+# set_from_resource $bg i3wm.color2 #f0f0f0
+#
+# # class                 border  backgr. text indicator child_border
+# client.focused          $bg     $bg     $fg  $bg       $bg
+# client.focused_inactive $bg     $bg     $fg  $bg       $bg
+# client.unfocused        $bg     $bg     $fg  $bg       $bg
+# client.urgent           $bg     $bg     $fg  $bg       $bg
+# client.placeholder      $bg     $bg     $fg  $bg       $bg
+#
+# client.background       $bg
 
 ##### i3-gaps ##############
 # for_window [class=".*"] border pixel 2 #*
 # gaps inner 10
 # gaps outer 2
 #gaps horizontal 2
-gaps inner 10
-gaps outer 10
+gaps inner 5 
+gaps outer 5 
 # for_window [class="^.*"] border pixel 0
 
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock2.sh' &
-exec_always wal -R
+# exec_always wal -R
 
 # opacity-rule = [
 #   "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"

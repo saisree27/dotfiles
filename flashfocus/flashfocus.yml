@@ -6,14 +6,14 @@
 flash-opacity: 0.3
 
 # Windows are restored to this opacity value at the end of a flash.
-default-opacity: 0.95
+default-opacity: 1
 
 # Length of flash in milliseconds.
 time: 200
 
 # If true, flashes are not faded out. This will improve performance but flashes
 # won't be smooth.
-simple: true
+simple: false 
 
 # Number of animation frames in a flash.
 ntimepoints: 10
@@ -52,11 +52,7 @@ flash-lone-windows: 'never'
 # windows at full opacity:
 #
 rules:
-  - window-class: Alacritty 
-    default-opacity: 0.7
-    window-class: Firefox
-    default-opacity: 0.94
-    window-class: brave-browser
+  - window-class: "Alacritty"
     default-opacity: 1
 #
 # I also would prefer that firefox windows are not flashed on focus:

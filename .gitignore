@@ -16,3 +16,6 @@
 !picom.conf
 !.xinitrc
 !.Xmodmap
+!bspwm/**
+!tmux/**
+!sxhkd/**
