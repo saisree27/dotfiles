@@ -167,6 +167,6 @@ shift+Print
 # super+shift+a
 #     ~/.config/scripts/connect_airpods.sh
 #
-# super+control+q
-#     ~/.config/scripts/lock.sh
+super+control+q
+    ~/.config/i3/lock2.sh
 #
