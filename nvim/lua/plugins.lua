@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     use 'sainnhe/sonokai'
 
+    use {'nyoom-engineering/oxocarbon.nvim'}
+
     -- AutoCompletion {{{
     use {
         "hrsh7th/nvim-cmp",

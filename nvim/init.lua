@@ -92,7 +92,8 @@ vim.g.sonokai_disable_terminal_colors = 1
 vim.g.sonokai_dim_inactive_windows = 0
 vim.g.sonokai_show_eob = 0
 vim.g.sonokai_better_performance = 1
-vim.cmd.colorscheme("sonokai")
+vim.cmd.colorscheme("oxocarbon")
+vim.opt.background = "dark"
 vim.api.nvim_set_hl(0, "Normal", { bg = "#0f0f0f" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "#0f0f0f" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
