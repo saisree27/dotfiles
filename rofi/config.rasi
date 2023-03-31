@@ -1,189 +1,86 @@
+
 @import "~/.cache/wal/colors-rofi-dark"
+
+@theme "/dev/null"
+
+* {
+	bg: #181E27;
+	background-color: @bg;
+}
 
 
 configuration {
-	modi:                       "drun,run,filebrowser,window";
-    show-icons:                 false;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
-	drun-display-format:        "{name}";
-	window-format:              "{w} · {c} · {t}";
+	show-icons: true;
+		icon-theme: "Papirus";
+	location: 0;
+	font: "JetBrainsMono Nerd Font 12";	
+	display-drun: "Launch:";
 }
 
-/*****----- Global Properties -----*****/
-* {
-    font:                        "JetBrains Mono Nerd Font Bold 10";
+window { 
+	width: 35%;
+	transparency: "real";
+	orientation: vertical;
+	border-color: #74adc0;
 }
 
-/*****----- Main Window -----*****/
-window {
-    /* properties for window widget */
-    transparency:                "real";
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       400px;
-    x-offset:                    0px;
-    y-offset:                    0px;
-
-    /* properties for all widgets */
-    enabled:                     true;
-    border-radius:               20px;
-    cursor:                      "default";
-    background-color:            @background;
-}
-
-/*****----- Main Box -----*****/
 mainbox {
-    enabled:                     true;
-    spacing:                     0px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
+	children: [inputbar, listview];
 }
 
-listbox {
-    spacing:                     20px;
-    padding:                     20px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "message", "listview", "mode-switcher" ];
-}
 
-/*****----- Inputbar -----*****/
-inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     100px 40px;
-    background-color:            transparent;
-    background-image:            url("~/Pictures/w4.jpg", width);
-    text-color:                  @foreground;
-    orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "entry" ];
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "";
-    padding:                     12px 15px;
-    border-radius:               100%;
-    background-color:            @background;
-    text-color:                  inherit;
-}
-entry {
-    enabled:                     true;
-    expand:                      true;
-    padding:                     12px 16px;
-    border-radius:               100%;
-    background-color:            @background;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;
-}
+// ELEMENT
+// -----------------------------------
 
-/*****----- Mode Switcher -----*****/
-mode-switcher{
-    enabled:                     true;
-    spacing:                     10px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-}
-button {
-    padding:                     12px;
-    border-radius:               100%;
-    background-color:            @background;
-    text-color:                  inherit;
-    cursor:                      pointer;
-}
-button selected {
-    text-color:                  @foreground;
-}
-
-/*****----- Listview -----*****/
-listview {
-    enabled:                     true;
-    columns:                     1;
-    lines:                       5;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    
-    spacing:                     10px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      "default";
-}
-
-/*****----- Elements -----*****/
 element {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     12px;
-    border-radius:               100%;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      pointer;
-}
-element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-/* element normal.urgent { */
-/*     background-color:            @urgent; */
-/*     text-color:                  @foreground; */
-/* } */
-/* element normal.active { */
-/*     background-color:            @active; */
-/*     text-color:                  @foreground; */
-/* } */
-/* element selected.normal { */
-/*     background-color:            @selected; */
-/*     text-color:                  @foreground; */
-/* } */
-/* element selected.urgent { */
-/*     background-color:            @urgent; */
-/*     text-color:                  @foreground; */
-/* } */
-/* element selected.active { */
-/*     background-color:            @urgent; */
-/*     text-color:                  @foreground; */
-/* } */
-element-icon {
-    background-color:            transparent;
-    text-color:                  inherit;
-    size:                        32px;
-    cursor:                      inherit;
-}
-element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+	padding: 4 12;
+	text-color: #EFE7DD;
 }
 
-/*****----- Message -----*****/
-message {
-    background-color:            transparent;
+element selected {
+	background-color: #74adc0;
 }
-textbox {
-    padding:                     12px;
-    border-radius:               100%;
-    background-color:            @background;
-    text-color:                  @foreground;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
 }
-error-message {
-    padding:                     15px;
-    border-radius:               0px;
-    background-color:            @background;
-    text-color:                  @foreground;
+
+element-icon {
+	size: 16 px;
+	background-color: inherit;
+	padding: 0 6 0 0;
+	alignment: vertical;
 }
+
+listview {
+	columns: 2;
+	lines: 9;
+	padding: 8 0;
+	fixed-height: true;
+	fixed-columns: true;
+	fixed-lines: true;
+	border: 0 10 6 10;
+}
+
+// INPUT BAR 
+//------------------------------------------------
+
+entry {
+	text-color: #EFE7DD;
+	padding: 10 10 0 0;
+	margin: 0 -2 0 0;
+}
+
+inputbar {
+	background-image: url("~/Pictures/wallpaper2a.jpg", width);
+	padding: 180 0 0;
+	margin: 0 0 0 0;
+} 
+
+prompt {
+	text-color: #aaffaa;
+	padding: 10 6 0 10;
+	margin: 0 -2 0 0;
+}
+

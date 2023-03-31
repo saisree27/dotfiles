@@ -167,32 +167,32 @@ draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
 colors:
-  name: Lost Woods
-  author: Baskerville
+  name: 3024 (dark)
+  author: Chris Kempson
   primary:
-    background: "#000000"
-    foreground: "#919191"
+    background: "#090300"
+    foreground: "#a5a2a2"
   cursor:
-    text: "#000000"
-    cursor: "#919191"
+    text: "#090300"
+    cursor: "#a5a2a2"
   normal:
-    black: "#303030"
-    red: "#a13a38"
-    green: "#00715d"
-    yellow: "#006f32"
-    blue: "#a43261"
-    magenta: "#913e88"
-    cyan: "#007086"
-    white: "#c6c6c6"
+    black: "#090300"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#a5a2a2"
   bright:
-    black: "#5e5e5e"
-    red: "#ffa59a"
-    green: "#24dfc4"
-    yellow: "#73db95"
-    blue: "#ff9fc9"
-    magenta: "#ffa7f6"
-    cyan: "#00ddf4"
-    white: "#ffffff"
+    black: "#5c5855"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#f7f7f7"
 # Mouse bindings
 #
 # Mouse bindings are specified as a list of objects, much like the key
@@ -582,4 +582,4 @@ key_bindings:
   #print_events: false
   # Highlight window damage information.
   #highlight_damage: false
-theme: Baskerville - lost woods
+theme: 3024.dark

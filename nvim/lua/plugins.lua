@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
     use 'sainnhe/sonokai'
 
     use {'nyoom-engineering/oxocarbon.nvim'}
+    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
 
     -- AutoCompletion {{{
     use {
