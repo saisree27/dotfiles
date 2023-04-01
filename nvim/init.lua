@@ -11,7 +11,7 @@ vim.g.netrw_banner = 0
 vim.g.astro_typescript = 'enable'
 vim.g.netrw_liststyle = 3
 set.termguicolors = true
-set.guicursor = ""
+-- set.guicursor = ""
 set.tabstop = 4
 set.shiftwidth = 4
 set.softtabstop = 4
@@ -89,9 +89,11 @@ map('n', '<C-f>',
 -- Highlights {{{
 vim.g.sonokai_diagnostic_virtual_text = 'colored'
 vim.g.sonokai_disable_terminal_colors = 1
+vim.g.sonkai_style = "shushia"
 vim.g.sonokai_dim_inactive_windows = 0
 vim.g.sonokai_show_eob = 0
 vim.g.sonokai_better_performance = 1
+vim.g.sonokai_enable_italic = 1
 vim.cmd.colorscheme("moonfly")
 vim.opt.background = "dark"
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
@@ -101,7 +103,10 @@ vim.opt.background = "dark"
 -- vim.api.nvim_set_hl(0, "Comment", { default = true, italic = true })
 -- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentIndex", { bg = "#000000" })
--- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#000000" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#000000" })
+vim.api.nvim_set_hl(0, "BufferTab", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "BufferTabPages", { bg = "#000000" })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentMod", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentSign", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#000000" })
@@ -189,7 +194,7 @@ require('nvim_comment').setup()
 
 -- stabline {{{
 require('stabline').setup {
-    stab_bg = "#222327",
+    stab_bg = "#000000",
     stab_left = " ",
     exclude_fts = { 'netrw', 'dashboard', 'lir', 'terminal' },
     font_active = "none",
