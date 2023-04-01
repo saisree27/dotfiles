@@ -10,7 +10,7 @@ else
     xrandr --dpi 96
 fi
 
-picom --config ~/.config/picom.conf --backend glx &
+picom --config ~/.config/picom.conf --experimental-backend &
 feh --bg-fill ~/Pictures/w4.jpg &
 flameshot &
 dunst &
