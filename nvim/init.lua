@@ -101,12 +101,12 @@ vim.opt.background = "dark"
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "Comment", { default = true, italic = true })
--- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#ffffff" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentIndex", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#000000" })
-vim.api.nvim_set_hl(0, "BufferTab", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "BufferTabPages", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "TabLineFill", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#000000" })
+-- vim.api.nvim_set_hl(0, "BufferTab", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "BufferTabPages", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentMod", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentSign", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#000000" })
@@ -194,14 +194,23 @@ require('nvim_comment').setup()
 
 -- stabline {{{
 require('stabline').setup {
-    stab_bg = "#000000",
     stab_left = " ",
-    exclude_fts = { 'netrw', 'dashboard', 'lir', 'terminal' },
-    font_active = "none",
-    numbers = function(bufn, n)
-        return n .. ' '
-    end
+    exclude_fts = { 'netrw', 'dashboard', 'lir', 'terminal' },style = "bar",
+    stab_bg = "#000000",
+    inactive_fg = "white",
+    fg = "#ff0037",
 }
+-- require('stabline').setup {
+--     stab_bg = "#000000",
+--     inactive_fg = "#ffffff",
+--     active_fg = "#33021a",
+--     stab_left = " ",
+--     exclude_fts = { 'netrw', 'dashboard', 'lir', 'terminal' },
+--     font_active = "none",
+--     numbers = function(bufn, n)
+--         return n .. ' '
+--     end
+-- }
 -- }}}
 
 -- indent-blankline {{{
