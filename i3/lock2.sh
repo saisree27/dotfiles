@@ -1,5 +1,5 @@
 #!/bin/sh
-TMPBG=~/Pictures/aurora.jpg
+TMPBG=~/Pictures/road.jpg
 dbus-send --print-reply --dest=com.github.chjj.compton.${DISPLAY/:/_} / \
     com.github.chjj.compton.opts_set string:no_fading_openclose boolean:false
 

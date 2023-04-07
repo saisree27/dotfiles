@@ -101,7 +101,7 @@ vim.opt.background = "dark"
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "Comment", { default = true, italic = true })
--- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#ffffff" })
+-- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferCurrentIndex", { bg = "#000000" })
 -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000", fg = "#000000" })
 -- vim.api.nvim_set_hl(0, "BufferTab", { bg = "#000000" })
@@ -176,13 +176,14 @@ vim.g.vimtex_quickfix_enabled = 0
 -- staline {{{
 require "staline".setup {
     sections = {
-        left = {},
-        mid = {},
-        right = { 'branch', ' ', 'line_column' }
+        left = { 'branch' },
+        mid  = { 'file_name' },
+        right = {  ' ', 'line_column' }
     },
     defaults = {
+        line_column = "%l:%c",
         fg = "#7f8490",
-        true_colors = false,
+        true_colors = true,
         branch_symbol = " "
     }
 }
@@ -198,7 +199,7 @@ require('stabline').setup {
     exclude_fts = { 'netrw', 'dashboard', 'lir', 'terminal' },style = "bar",
     stab_bg = "#000000",
     inactive_fg = "white",
-    fg = "#ff0037",
+    fg = "#4c36ba",
 }
 -- require('stabline').setup {
 --     stab_bg = "#000000",
