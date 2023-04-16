@@ -121,6 +121,10 @@ vim.api.nvim_set_hl(0, "@type", hl)
 -- }}}
 
 -- Autocmds {{{
+vim.api.nvim_create_autocmd("FileType", {
+    command = "setlocal formatprg=prettier\\ --single-quote\\ --trailing-comma\\ es5\\ --parser\\ flow",
+    pattern = {"javascript", "javascriptreact"},
+})
 local group = vim.api.nvim_create_augroup("rc", { clear = false })
 vim.api.nvim_create_autocmd("TermOpen",
     { command = "set nobuflisted bufhidden=hide nonumber norelativenumber", group = group })
