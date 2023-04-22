@@ -72,19 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
-}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -113,9 +101,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(starship init zsh)
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+alias r="lfcd"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval $(starship init zsh)
 alias ls="exa -la"
 alias cmatrix="unimatrix -n -s 96 -l 'o'"
-bindkey -s '^G' 'cat ~/git_token^M'
-alias colorscheme="cat ~/.cache/wal/sequences"
-(colorscheme &)
-
+bindkey -s '^G' 'xclip -sel clip ~/git_token^M'
+# alias colorscheme="cat ~/.cache/wal/sequences"
+alias quartus="wal -i ~/Pictures/wallpaper1.jpg -l && setsid /home/saigautam/intelFPGA_lite/19.1/quartus/bin/quartus && sleep 1 && wal -i ~/Pictures/wallpaper1.jpg"
+# (colorscheme &)
+alias soff="sudo nmcli radio wifi off"
+alias son="sudo nmcli radio wifi on"
+export PATH=$PATH:/home/saigautam/.spicetify
+export PATH=$PATH:/home/saigautam/.local/bin
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
