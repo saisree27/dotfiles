@@ -6,7 +6,7 @@ super + Return
 	alacritty -e tmux 
 
 super + shift + Return
-	alacritty --command lf
+    zathura
 
 # program launcher
 super + @space
@@ -150,10 +150,10 @@ XF86AudioPause
     playerctl --all-players play-pause
 
 XF86AudioNext
-    playerctl --player=ncspot next
+    playerctl --all-players next
 
 XF86AudioPrev
-    playerctl --player=ncspot previous
+    playerctl --all-players previous
 
 Print
     flameshot full -c
